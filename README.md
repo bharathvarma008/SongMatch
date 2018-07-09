@@ -18,16 +18,23 @@ like in 'Testing.ipynb' file.
 **Preprocessing the all_songs folder is a mandate & is a one-time job after refreshing the song list**
 
 `import preprocess`
+
 `import glob, os`
+
 `folder = glob.glob(os.getcwd() + '/all_songs/*')`
+
 `preprocess.store_feat_of_songs(folder)`
 
 
 **Getting the results**
 
 `import songMatch`
+
 `import glob, os`
+
 `featList_folder = glob.glob(os.getcwd() + '/featList/*')`
+
 `df = songMatch.get_results('test.mp3', featList_folder, min_perc=0.70)`
+
 `df`
 
